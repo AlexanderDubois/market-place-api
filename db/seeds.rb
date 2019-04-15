@@ -12,12 +12,12 @@ Faker::Config.locale = 'en-GB'
 # User.destroy_all
 # Category.destroy_all
 
-# u1 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
-# u2 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
-# u3 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
-# u4 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
-# u5 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
-# u6 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
+ u1 = User.create(name: Faker::Name.name, email: "test@gmail.com", profile_img_url: Faker::Avatar.image, password: "Hola")
+ u2 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
+ u3 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
+ u4 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
+ u5 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
+  u6 = User.create(name: Faker::Name.name, email: Faker::Internet.email, profile_img_url: Faker::Avatar.image)
 
 # c1 = Category.create(name: "Vehicles", icon: "car")
 # c2 = Category.create(name: "Home and Garden", icon: "home")

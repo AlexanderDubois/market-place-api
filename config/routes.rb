@@ -8,8 +8,8 @@ Rails.application.routes.draw do
       resources :products
       resources :categories, only: [:index]
       resources :product_images, only: [:destroy]
-      post '/users/login', to: 'users#login'
-      post '/users/signup', to: 'users#signup'
+      post '/login', to: 'auth#login'
+      post '/signup', to: 'auth#signup'
    end
   end
 end
