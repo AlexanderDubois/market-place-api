@@ -1,7 +1,7 @@
 class Api::V1::ProductsController < ApplicationController
 
     def index 
-        @products = Product.all
+        @products = Product.all.sort{|a,b| b.id <=> a.id}
         render json: @products
     end
 
@@ -36,7 +36,8 @@ class Api::V1::ProductsController < ApplicationController
         @product = Product.new(product_params)
         if @product
             @product.save
-            save_images_to_product(img_urls: images_params["img_urls"], product_id: @product.id)
+            save_images_to_product(img_urls: ["https://loremflickr.com/400/600/product?lock=#{@product.id * 4}"], product_id: @product.id)
+            # save_images_to_product(img_urls: images_params["img_urls"], product_id: @product.id)
             render json: @product
         else 
             render json: {
