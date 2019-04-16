@@ -19,7 +19,7 @@ class Api::V1::UsersController < ApplicationController
             render json: @user 
         else 
             render json: {
-                error: "Access denied, please sign up",
+                error: "Access denied, please sign up.",
                 status: 401
             }
         end
